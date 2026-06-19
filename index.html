@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️</title>
+<title>Felices 2 Años Amor 💙</title>
 
 <style>
 *{
@@ -13,227 +13,278 @@
 }
 
 body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
     overflow:hidden;
-    background:#000;
-    font-family:Arial, sans-serif;
+    background:linear-gradient(to bottom,#081c3a,#102a54,#1b3f7a);
+    font-family:'Segoe UI',sans-serif;
 }
 
-canvas{
-    display:block;
-}
-
-#texto{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+h1{
     color:white;
-    font-size:1.5rem;
+    font-size:3rem;
     text-align:center;
-    z-index:10;
-    transition:1s;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+    animation:glow 2s infinite alternate;
 }
 
-#videoContainer{
+p{
+    color:white;
+    font-size:1.2rem;
+    text-align:center;
+    margin-top:25px;
+    max-width:700px;
+    padding:0 20px;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 30px #60a5fa;
+    }
+}
+
+/* TULIPANES */
+
+.garden{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:35px;
+    margin-top:20px;
+}
+
+.tulip{
+    position:relative;
+    animation:sway 3s ease-in-out infinite alternate;
+}
+
+.tulip:nth-child(2){
+    animation-duration:4s;
+}
+
+.tulip:nth-child(3){
+    animation-duration:3.5s;
+}
+
+.tulip:nth-child(4){
+    animation-duration:4.5s;
+}
+
+.tulip:nth-child(5){
+    animation-duration:3.8s;
+}
+
+.flower{
+    position:relative;
+    width:80px;
+    height:90px;
+}
+
+.petal{
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%) scale(0);
-    width:90%;
-    max-width:400px;
-    transition:1.5s ease;
-    z-index:20;
 }
 
-#videoContainer.show{
-    transform:translate(-50%,-50%) scale(1);
+.center{
+    width:40px;
+    height:60px;
+    left:20px;
+    top:8px;
+    background:#60a5fa;
+    border-radius:50% 50% 10px 10px;
+    z-index:2;
 }
 
-iframe{
-    width:100%;
-    height:700px;
-    border:none;
+.left{
+    width:35px;
+    height:55px;
+    left:5px;
+    top:18px;
+    background:#3b82f6;
+    border-radius:50% 0 50% 50%;
+    transform:rotate(-25deg);
+}
+
+.right{
+    width:35px;
+    height:55px;
+    right:5px;
+    top:18px;
+    background:#2563eb;
+    border-radius:0 50% 50% 50%;
+    transform:rotate(25deg);
+}
+
+.stem{
+    width:8px;
+    height:140px;
+    background:#228B22;
+    margin:auto;
     border-radius:20px;
-    box-shadow:0 0 40px rgba(255,255,255,.3);
+    position:relative;
+}
+
+.stem::before{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:15px;
+    background:#2e8b57;
+    border-radius:50px 0;
+    top:50px;
+    left:-25px;
+    transform:rotate(-30deg);
+}
+
+.stem::after{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:15px;
+    background:#2e8b57;
+    border-radius:0 50px;
+    top:90px;
+    right:-25px;
+    transform:rotate(30deg);
+}
+
+@keyframes sway{
+    from{
+        transform:rotate(-4deg);
+    }
+    to{
+        transform:rotate(4deg);
+    }
+}
+
+/* CORAZONES */
+
+.heart{
+    position:absolute;
+    color:#93c5fd;
+    animation:float linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* ESTRELLAS */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+    }
+    50%{
+        opacity:1;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div id="texto">
-    Toca la pantalla ❤️
+<h1>💙 Felices 2 Años Amor 💙</h1>
+
+<div class="garden">
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
 </div>
 
-<div id="videoContainer">
-    <iframe
-    src="https://www.youtube.com/embed/-nwmtQeC8Kc"
-    allowfullscreen>
-    </iframe>
-</div>
-
-<canvas id="canvas"></canvas>
+<p>
+Gracias por estos 2 años por cada cosa que hemos pasado 
+Cada día contigo es un regalo y espero que sigamos construyendo recuerdos bonitos juntos. Te amo mucho mucho mi bebe
+</p>
 
 <script>
 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-let phase = 0;
-
-function heartPoint(t){
-    return {
-        x:16*Math.pow(Math.sin(t),3),
-        y:-(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t))
-    };
+// Corazones flotando
+for(let i=0;i<25;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💙";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*25)+"px";
+    heart.style.animationDuration=(5+Math.random()*6)+"s";
+    document.body.appendChild(heart);
 }
 
-class Particle{
-
-    constructor(x,y,targetX,targetY){
-        this.x=x;
-        this.y=y;
-        this.tx=targetX;
-        this.ty=targetY;
-        this.size=Math.random()*3+1;
-        this.vx=0;
-        this.vy=0;
-    }
-
-    update(){
-
-        if(phase===1){
-
-            this.x+=(this.tx-this.x)*0.05;
-            this.y+=(this.ty-this.y)*0.05;
-
-        }else if(phase===2){
-
-            this.x+=this.vx;
-            this.y+=this.vy;
-
-        }
-
-    }
-
-    draw(){
-        ctx.beginPath();
-        ctx.fillStyle="#ff4d88";
-        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-        ctx.fill();
-    }
+// Estrellas
+for(let i=0;i<120;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.animationDelay=Math.random()*2+"s";
+    document.body.appendChild(star);
 }
-
-function createHeart(){
-
-    particles=[];
-
-    for(let i=0;i<2000;i++){
-
-        let t=Math.random()*Math.PI*2;
-
-        let p=heartPoint(t);
-
-        let scale=15;
-
-        let targetX=canvas.width/2+p.x*scale;
-        let targetY=canvas.height/2+p.y*scale;
-
-        particles.push(
-            new Particle(
-                Math.random()*canvas.width,
-                Math.random()*canvas.height,
-                targetX,
-                targetY
-            )
-        );
-    }
-}
-
-let beatScale=1;
-
-function animate(){
-
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    if(phase===1){
-
-        beatScale=1+Math.sin(Date.now()*0.005)*0.08;
-
-        particles.forEach(p=>{
-
-            let dx=p.tx-canvas.width/2;
-            let dy=p.ty-canvas.height/2;
-
-            p.tx=canvas.width/2+dx*beatScale;
-            p.ty=canvas.height/2+dy*beatScale;
-
-            p.update();
-            p.draw();
-
-        });
-
-    }else{
-
-        particles.forEach(p=>{
-            p.update();
-            p.draw();
-        });
-
-    }
-
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-document.addEventListener("click",()=>{
-
-    if(phase===0){
-
-        document.getElementById("texto").style.opacity="0";
-
-        createHeart();
-
-        phase=1;
-
-    }
-
-    else if(phase===1){
-
-        phase=2;
-
-        particles.forEach(p=>{
-
-            let angle=Math.random()*Math.PI*2;
-            let speed=Math.random()*8+2;
-
-            p.vx=Math.cos(angle)*speed;
-            p.vy=Math.sin(angle)*speed;
-
-        });
-
-        setTimeout(()=>{
-
-            document.getElementById("videoContainer")
-            .classList.add("show");
-
-        },1200);
-
-    }
-
-});
-
-window.addEventListener("resize",()=>{
-
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-
-});
 
 </script>
 
